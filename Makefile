@@ -5,10 +5,10 @@ all: $(BIN)
 $(BIN): decide.ml
 	ocamlfind ocamlopt -o $(BIN) $< -package yojson -linkpkg
 
-PHONY: test clean
+PHONY: run clean
 
-test:: $(BIN)
-	./$(BIN) input-DECIDE/input0.json
+run:: $(BIN)
+	./run_examples.sh
 
 clean::
 	rm -f *.cm[xi] *.o *~ $(BIN)
