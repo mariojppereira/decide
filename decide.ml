@@ -546,4 +546,4 @@ let launch =
   for_all fuv (fun e -> e)
 
 let () =
-  Format.printf "%s@." ((fun x -> if x then "yes" else "no") launch)
+  Format.printf "%s@." (if launch then "yes" else "no")
